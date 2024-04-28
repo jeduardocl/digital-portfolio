@@ -1,0 +1,6 @@
+_build/
+.ipynb_checkpoints/
+.jupyter/
+.virtual_documents/
+*.pyc
+.DS_Store
