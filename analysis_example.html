@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -399,7 +399,12 @@ document.write(`
 <li><p>Explore the origins of the Titanic’s passengers, including their countries of origin, to gain a better understanding of the cultural diversity of the passenger list.</p></li>
 <li><p>Determine which passengers traveled with their families and which ones traveled alone to gain insights into the social dynamics of the passengers.</p></li>
 </ol>
-<div class="cell docutils container">
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -408,6 +413,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -552,33 +558,45 @@ memory usage: 69.7+ KB
 <h2>Demographic characteristics of the Titanic’s passengers<a class="headerlink" href="#demographic-characteristics-of-the-titanic-s-passengers" title="Link to this heading">#</a></h2>
 <p>Let’s look at some demographical information about the passengers.</p>
 <p>Let’s take a look at socio-economic class of a person (Pclass column)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">titanic_df</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x2b08b513590&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x19f0dd92660&gt;
 </pre></div>
 </div>
 <img alt="_images/99f79e31c6aee67dec9d6958383017787b8b9592a145139f76cc08e68c33d956.png" src="_images/99f79e31c6aee67dec9d6958383017787b8b9592a145139f76cc08e68c33d956.png" />
 </div>
+</details>
 </div>
 <p>Let’s explore passangers’ gender:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># number of male and female passengers</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">titanic_df</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x2b08c88a570&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x19f0dd92570&gt;
 </pre></div>
 </div>
 <img alt="_images/0afa12c8dffb0435fe81170796647e25e0eb22463f251939ccbeee0386767f53.png" src="_images/0afa12c8dffb0435fe81170796647e25e0eb22463f251939ccbeee0386767f53.png" />
 </div>
+</details>
 </div>
 <p>Figure summary: there were considerably more male passengers onboard.</p>
 <p><strong><em>Note: It is important to acknowledge that gender is not binary and that there are many individuals who do not identify as strictly male or female. However, the dataset available for the Titanic passengers only includes information on male and female passengers. While this limitation may not fully capture the diversity of gender identities among the passengers, it is still valuable in providing insights into the demographics and social dynamics of the Titanic’s passengers.</em></strong></p>
@@ -610,23 +628,29 @@ Name: count, dtype: int64
 </div>
 </div>
 <p>Now, let’s check teh distribution of men, women and children belonging to different socio-economic classes.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">titanic_df</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Individuals&#39;</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x2b08c968530&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x19f0dd91c70&gt;
 </pre></div>
 </div>
 <img alt="_images/8fbcd52f2fa8702440b11bc9d375ac8f2a81e94b578803c92d816879ef0f7fd3.png" src="_images/8fbcd52f2fa8702440b11bc9d375ac8f2a81e94b578803c92d816879ef0f7fd3.png" />
 </div>
+</details>
 </div>
 <p>Figure summary: There are way more male passengers than woman or childeren in the 3rd class than in any other class.</p>
 <p>Let’s check out how the age distribution varies for different classes</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_class</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">titanic_df</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span><span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">age_class</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">,</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">oldest</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
@@ -635,12 +659,18 @@ Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x2b08c9bcf80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x19f0df32cc0&gt;
 </pre></div>
 </div>
 <img alt="_images/5e51d01745380ebb3f39913bda2603241019939f172c20ae07f04b8263526cc6.png" src="_images/5e51d01745380ebb3f39913bda2603241019939f172c20ae07f04b8263526cc6.png" />
 </div>
+</details>
 </div>
 <p>Figure summary: first class passengers were older that passagenrs of other class</p>
 </section>
@@ -652,18 +682,24 @@ Name: count, dtype: int64
 <li><p>Q = Queenstown</p></li>
 <li><p>S = Southampton</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Embarked&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">titanic_df</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x2b08c88ba70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x19f0df32f30&gt;
 </pre></div>
 </div>
 <img alt="_images/7416ce1a1afe785f55b7df8f8fe45841fbd9bb259631912ac80eb583b48aad7b.png" src="_images/7416ce1a1afe785f55b7df8f8fe45841fbd9bb259631912ac80eb583b48aad7b.png" />
 </div>
+</details>
 </div>
 <p>Figure summary: Most of the 3rd class passengers embarked from Southampton</p>
 </section>
@@ -675,7 +711,7 @@ Name: count, dtype: int64
 <li><p><strong>Parch</strong> : number of parents or children someone had on the ship.</p></li>
 </ul>
 <p>We can combine teh column to determine whetehr the passanger was alone or with someone and record in in <strong>ModeofTravel</strong> column:</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Adding the number of family a passenger had onboard</span>
 <span class="n">titanic_df</span><span class="p">[</span><span class="s1">&#39;ModeofTravel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">SibSp</span> <span class="o">+</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">Parch</span>
@@ -684,18 +720,24 @@ Name: count, dtype: int64
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;ModeofTravel&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">titanic_df</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x2b08cb40ad0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x19f0ca9e8a0&gt;
 </pre></div>
 </div>
 <img alt="_images/c38777a0237fecc823bd01c93ca5eef6fb6e2dc04ee5230bbb8af6d765595b02.png" src="_images/c38777a0237fecc823bd01c93ca5eef6fb6e2dc04ee5230bbb8af6d765595b02.png" />
 </div>
+</details>
 </div>
 <p>Figure summary: The majority of people on the ship travled with someone.</p>
 </section>
