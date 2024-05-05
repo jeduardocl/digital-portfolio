@@ -3,7 +3,7 @@
 
 title: Digital Portafolio
 author: Alex Do
-logo: ../AlexDo-files/profile-picture.png
+logo: profile-picture.png
 
 
 # Force re-execution of notebooks on each build.
